@@ -16,14 +16,14 @@ public class CCTAir
     {
         //Make a object type Setup
         SetUp su = new SetUp();
+   
+        //It is called the method flights in order to get arraylist flights
+        su.flights();
+        
         //It is called the method airCraft in order to get arraylist airCraft
         su.airCraft();
         //It is called the method Pilots in order to get arraylist Pilots
         su.pilots();
-        
-        //It is called the method flights in order to get arraylist flights
-        su.flights();
-        
         
        //Make a object type Menu
         Menu myMenu = new Menu(su);

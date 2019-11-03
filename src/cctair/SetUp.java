@@ -17,7 +17,7 @@ public class SetUp
 {
     private ArrayList<Flight> flights = new ArrayList<>();
     private ArrayList<Pilot> Pilots = new ArrayList<>();
-    public ArrayList<AirPlane> AirPlanes = new ArrayList<>();
+    private ArrayList<AirPlane> AirPlanes = new ArrayList<>();
 
     public ArrayList<Flight> getFlights() {
         return flights;
@@ -47,27 +47,28 @@ public class SetUp
         this.flights.add(new Flight("Santiago","Dublin","13:00","18:00","04/11/19", "Arrival",new AirPlane()));
      
     }
+    
     public void printFlights(){
         for(Flight f: this.flights){
             System.out.println(f.toString());
         }
     }
+    
      public void airCraft(){
-         
-        List<AirPlane> AirPlanes = new ArrayList<>();
         this.AirPlanes.add(new AirPlane("1","Boeing","300",500,new Pilot()));
         this.AirPlanes.add(new AirPlane("2","Airbus","301",510,new Pilot()));
         this.AirPlanes.add(new AirPlane("3","Boeing","302",520,new Pilot()));
         
-        flights.get(0).setAirPlane(AirPlanes.get(0));
-        flights.get(1).setAirPlane(AirPlanes.get(1));
-        flights.get(2).setAirPlane(AirPlanes.get(2));
-        flights.get(3).setAirPlane(AirPlanes.get(0));
-        flights.get(4).setAirPlane(AirPlanes.get(1));
-        flights.get(5).setAirPlane(AirPlanes.get(2));
-        flights.get(6).setAirPlane(AirPlanes.get(0));
-        flights.get(7).setAirPlane(AirPlanes.get(1));
-        }
+        this.flights.get(0).setAirPlane(AirPlanes.get(0));
+        this.flights.get(1).setAirPlane(AirPlanes.get(1));
+        this.flights.get(2).setAirPlane(AirPlanes.get(2));
+        this.flights.get(3).setAirPlane(AirPlanes.get(0));
+        this.flights.get(4).setAirPlane(AirPlanes.get(1));
+        this.flights.get(5).setAirPlane(AirPlanes.get(2));
+        this.flights.get(6).setAirPlane(AirPlanes.get(0));
+        this.flights.get(7).setAirPlane(AirPlanes.get(1));
+      }
+     
      public void printAirCraft(){
          for(AirPlane a:this.AirPlanes){
              System.out.println(a.toString());
@@ -82,7 +83,7 @@ public class SetUp
           
         AirPlanes.get(0).assignPilot(Pilots.get(1));
         AirPlanes.get(1).assignPilot(Pilots.get(0));
-         AirPlanes.get(2).assignPilot(Pilots.get(2));
+        AirPlanes.get(2).assignPilot(Pilots.get(2));
 
      }
      
@@ -91,6 +92,7 @@ public class SetUp
              System.out.println(p.toString());
          }
      }
+     
       public void createFlight(){
             Scanner myObj = new Scanner(System.in);  // Create a Scanner object
             System.out.println("what is the origin");
